@@ -1,4 +1,4 @@
-package programmers.lv_0;
+package basic;
 
 /*  <flag에 따라 다른 값 반환하기>
     

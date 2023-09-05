@@ -1,4 +1,4 @@
-package programmers.lv_0;
+package basic;
 
 /*
 
@@ -36,7 +36,7 @@ class Solution {
     }
 }
 
-public class If_01 {
+public class If01 {
     public static void main(String[] args) {
 
         Solution sol = new Solution();

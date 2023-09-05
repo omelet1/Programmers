@@ -1,6 +1,6 @@
-package programmers.lv_0;
+package basic;
 
-public class String_01 {
+public class String01 {
 
     /*
      * 
@@ -16,7 +16,7 @@ public class String_01 {
      */
     public static void main(String[] args) {
 
-        String_01.solution("ProgrammerS123", 11);
+        String01.solution("ProgrammerS123", 11);
     }
 
     public static String solution(String my_string, int n) {
