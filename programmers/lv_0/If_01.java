@@ -42,7 +42,7 @@ public class If_01 {
         Solution sol = new Solution();
 
         sol.solution(14, "wa");
-
+        System.out.println("커밋 테스트");
     }
 
 }
