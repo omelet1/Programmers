@@ -1,5 +1,7 @@
 package exerciseBook;
 
+import java.math.BigInteger;
+
 public class Main {
     
     public static void main(String[] args) {
@@ -14,10 +16,10 @@ public class Main {
     public static String solution(String a, String b) {
         String answer = "";
         
-        long a1 = Long.parseLong(a);
-        long b1 = Long.parseLong(b);
-        
-        answer = String.valueOf(a1 + b1);
+        BigInteger a1 = new BigInteger(a);
+        BigInteger b1 = new BigInteger(b);
+
+        answer = String.valueOf(a1.add(b1));
         
         return answer;
     }
