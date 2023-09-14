@@ -1,31 +1,38 @@
 package exerciseBook;
 
-import java.util.ArrayList;
-import java.util.List;
-
-/*
-import java.util.Stack;
-
 class Solution {
     public int[] solution(int[] arr) {
+        int[] answer = {};
 
-        Stack<Integer> stack = new Stack<>();
+        int i = 0; // i 초기값 0으로 설정
+        int[] stk = null;
+        int[] nstk = null;
 
-        for (int num : arr) {
-            while (!stack.isEmpty() && num <= stack.peek())
-                stack.pop();
-            stack.push(num);
+        while (i < arr.length) {
+            if (stk == null) {
+                stk = new int[] { arr[i] };
+                ++i;
+            } else if (stk.length != 0 && stk[stk.length - 1] == arr[i]) {
+                nstk = new int[stk.length - 1];
+                System.arraycopy(stk, 0, nstk, 0, stk.length - 1);
+                stk = new int[nstk.length];
+                System.arraycopy(nstk, 0, stk, 0, nstk.length);
+                ++i;
+
+            } else if (stk.length != 0 && stk[stk.length - 1] != arr[i]) {
+                nstk = new int[stk.length + 1];
+                System.arraycopy(stk, 0, nstk, 0, stk.length);
+                nstk[stk.length] = arr[i];
+                stk = new int[nstk.length];
+                System.arraycopy(nstk, 0, stk, 0, nstk.length);
+                ++i;
+
+            } 
+
         }
 
-        return stack.stream().mapToInt(i -> i).toArray();
+        answer = stk;
+
+        return answer;
     }
 }
- */
-
-// class Solution {
-
-// public int[] solution(int[] arr) {
-    
-// }
-
-// }
